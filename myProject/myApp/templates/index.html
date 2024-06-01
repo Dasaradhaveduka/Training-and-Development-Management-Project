@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training and Development Management</title>
+    
+    <!-- <link rel="stylesheet" href="{% static 'index.css' %}"> -->
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #f4f4f4; */
+    background-image: url(image.jpeg);
+    background-size:cover;
+    
+}
+
+.dashboard-container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #7da9acb7;
+    color:white;
+    padding: 20px 0;
+    
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px;
+    color: white;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+    background-color:rgba(131, 168, 131, 0.598);
+    
+
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    margin: 20px 0;
+    padding: 20px;
+    background: #ffffff84;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10%;
+}
+
+.hidden {
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input {
+    padding: 5px;
+    margin-top: 5px;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #555;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.needs-item, .program-item, .enrollment-item, .progress-item {
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.needs-item:last-child, .program-item:last-child, .enrollment-item:last-child, .progress-item:last-child {
+    border-bottom: none;
+}
+/* Marquee styling */
+.marquee {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    white-space: nowrap; /* Prevent text wrap */
+    overflow: hidden; /* Hide text overflow */
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 20s linear infinite; /* Adjust animation duration */
+}
+
+@keyframes marquee {
+    1% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+           <h1><strong>Training and Development Management</strong></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" onclick="showSection('home')">Home</a></li>
+                    <li><a href="login.html" onclick="showSection('login')">Login</a></li>
+                    <li><a href="register.html" onclick="showSection('register')">Register</a></li>
+                    <li><a href="course.html" onclick="showSection('courses Available')">courses Available</a></li>
+                    <li><a href="enroll.html" onclick="showSection('Course Enrollment')">Course Enrollment</a></li>
+                    <li><a href="aboutus.html" onclick="showSection('About US')">About Us</a></li>
+                    <li><a href="contact.html" onclick="showSection('Contact')">Contact Us</a></li>
+                    <li><a href="feed.html" onclick="showSection('Feedback')">Feedback</a></li>
+
+
+                </ul>
+            </nav>
+        </header>
+         <!-- Marquee section -->
+         <div class="marquee">
+            <div class="marquee-content">Hurry up now, limited slots available</div>
+        </div>
+
+        <main>
+            <section id="home">
+                <h2>Welcome to the Training and Development Management System</h2>
+                <p>Your one-stop solution for managing all your training and development needs.
+                    Training and development in Human Resource Management (HRM) refers to a system of educating employees within a company. It includes various tools, instructions, and activities designed to improve employee performance. It's an opportunity for employees to increase their knowledge and upgrade their skills.
+                </p>
+                <h3>I wish you all the best of luck on your tough training. You can use this time to learn more about yourself and what you can do. People will admire you more when you have proved yourself in the field of competition.</h3>
+            </section>
+            <section id="login" class="hidden">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <label for="login-username">Username:</label>
+                    <input type="text" id="login-username" name="username" required>
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" name="password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </section>
+            <section id="register" class="hidden">
+                <h2>Register</h2>
+                <form id="register-form">
+                    <label for="register-username">Username:</label>
+                    <input type="text" id="register-username" name="username" required>
+                    <label for="register-email">Email:</label>
+                    <input type="email" id="register-email" name="email" required>
+                    <label for="register-password">Password:</label>
+                    <input type="password" id="register-password" name="password" required>
+                    <button type="submit">Register</button>
+                </form>
+            </section>
+            <section id="dashboard" class="hidden">
+                <h2>Training and Development Dashboard</h2>
+                <div id="training-overview">
+                    <h3>Training Needs Assessment</h3>
+                    <div id="needs-assessment"></div>
+                </div>
+                <div id="training-programs">
+                    <h3>Training Programs</h3>
+                    <div id="program-list"></div>
+                </div>
+                <div id="employee-enrollment">
+                    <h3>Employee Enrollment</h3>
+                    <div id="enrollment-list"></div>
+                </div>
+                <div id="training-progress">
+                    <h3>Training Delivery and Tracking</h3>
+                    <div id="progress-tracking"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Courses</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            background-image: url(cou.jpg);
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .course {
+            width: calc(25% - 40px);
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .course:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .course h2 {
+            margin-top: 0;
+        }
+
+        .course img {
+            max-width: 150px; /* Increased logo size */
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        .course p {
+            margin-top: 10px;
+        }
+
+        .enroll-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .enroll-button:hover {
+            background-color: #0056b3;
+        }
+        header {
+    background:hsla(180, 8%, 7%, 0.573);
+    color:white;
+    padding: 20px 0;
+    
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px;
+    color: rgb(205, 9, 9);
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+    background-color:rgba(4, 24, 4, 0.598);
+    
+
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    margin: 20px 0;
+    padding: 20px;
+    background: #ffffff84;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10%;
+}
+/* Marquee styling */
+.marquee {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    white-space: nowrap; /* Prevent text wrap */
+    overflow: hidden; /* Hide text overflow */
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 20s linear infinite; /* Adjust animation duration */
+}
+
+@keyframes marquee {
+    1% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+    </style>
+</head>
+<body>
+        <div class="dashboard-container">
+            <header>
+               <h1><strong>Training and Development Management</strong></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" onclick="showSection('home')">Home</a></li>
+                        <li><a href="login.html" onclick="showSection('login')">Login</a></li>
+                        <li><a href="register.html" onclick="showSection('register')">Register</a></li>
+                        <li><a href="course.html" onclick="showSection('courses Available')">courses Available</a></li>
+                        <li><a href="enroll.html" onclick="showSection('Course Enrollment')">Course Enrollment</a></li>
+                        <li><a href="aboutus.html" onclick="showSection('About US')">About Us</a></li>
+                        <li><a href="contact.html" onclick="showSection('Contact')">Contact Us</a></li>
+                        <li><a href="feed.html" onclick="showSection('Feedback')">Feedback</a></li>
+    
+    
+                    </ul>
+                </nav>
+            </header>
+             <!-- Marquee section -->
+             <div class="marquee">
+                <div class="marquee-content">Hurry up now, limited slots available</div>
+            </div>
+    <div class="container">
+        
+        <div class="course" >
+            <img src="pylogo.jpeg" alt="Python Full Stack Logo">
+            <h2>Python Full Stack</h2>
+            <p>This course covers a comprehensive range of topics in Python programming for full-stack development.</p>
+            <button class="enroll-button" onclick="window.location.href = 'enroll.html';">Enroll</button>
+        </div>
+
+        <div class="course">
+            <img src="javalo.jpeg" alt="Java Full Stack Logo">
+            <h2>Java Full Stack</h2>
+            <p>This course provides in-depth knowledge of Java programming and full-stack development using Java technologies.</p>
+            <button class="enroll-button" onclick="window.location.href = 'enroll.html';">Enroll</button>
+        </div>
+
+        <div class="course">
+            <img src="test.jpeg" alt="Testing Logo">
+            <h2>Testing</h2>
+            <p>This course focuses on software testing methodologies, tools, and techniques for ensuring software quality.</p>
+            <button class="enroll-button" onclick="window.location.href = 'enroll.html';">Enroll</button>
+        </div>
+
+        <div class="course">
+            <img src="data.jpeg" alt="Data Science Logo">
+            <h2>Data Science Course</h2>
+            <p>Data science is an interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from structured and unstructured data.</p>
+            <button class="enroll-button" onclick="window.location.href = 'enroll.html';">Enroll</button>
+        </div>
+        <div class="course">
+            <img src="ml.jpeg" alt="Data Science Logo">
+            <h2>Data Science Course</h2>
+            <p>Machine learning (ML) is defined as a discipline of artificial intelligence (AI) that provides machines the ability to automatically learn from data and past experiences to identify patterns and make predictions with minimal human intervention.</p>
+            <button class="enroll-button" onclick="window.location.href = 'enroll.html';">Enroll</button>
+        </div>
+    </div>
+</body>
+</html>

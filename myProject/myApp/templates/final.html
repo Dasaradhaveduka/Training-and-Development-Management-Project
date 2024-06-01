@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Attendance</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.session {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.session h2 {
+    margin-top: 0;
+}
+
+form {
+    margin-top: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Training Sessions</h1>
+        <div class="session">
+            <h2>Session 1: Python Basics</h2>
+            <p>Date: January 15, 2024</p>
+            <p>Trainer: John Doe</p>
+            <form action="mark_attendance.php" method="post">
+                <label for="employee1"><input type="checkbox" id="employee1" name="attendance[]" value="employee1"> Employee 1</label><br>
+                <label for="employee2"><input type="checkbox" id="employee2" name="attendance[]" value="employee2"> Employee 2</label><br>
+                <label for="employee3"><input type="checkbox" id="employee3" name="attendance[]" value="employee3"> Employee 3</label><br>
+                <input type="submit" value="Submit Attendance">
+            </form>
+        </div>
+        <div class="session">
+            <h2>Session 2: Java Basics</h2>
+            <p>Date: January 20, 2024</p>
+            <p>Trainer: Jane Smith</p>
+            <form action="mark_attendance.php" method="post">
+                <label for="employee4"><input type="checkbox" id="employee4" name="attendance[]" value="employee4"> Employee 4</label><br>
+                <label for="employee5"><input type="checkbox" id="employee5" name="attendance[]" value="employee5"> Employee 5</label><br>
+                <label for="employee6"><input type="checkbox" id="employee6" name="attendance[]" value="employee6"> Employee 6</label><br>
+                <input type="submit" value="Submit Attendance">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

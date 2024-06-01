@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Feedback</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 10px;
+            height: 100vh;
+            display: flex;
+            align-items: center; /* Align vertically */
+            background-image: url('feed.jpg'); /* Path to your background image */
+            background-size: cover;
+            background-position: center;
+            
+        }
+
+        .login-form {
+            background-color: rgba(110, 190, 237, 0.635);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .login-form h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: white; /* Change text color to white */
+        }
+
+        .login-form label {
+            display: block;
+            margin-bottom: 10px;
+            color: white; /* Change text color to white */
+        }
+
+        .login-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            resize: vertical;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-form button:hover {
+            background-color: #bcd6f1;
+        }
+        header {
+            background: #7da9acb7;
+            color:white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 10px;
+            color: white;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+            background-color:rgba(131, 168, 131, 0.598);
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            margin: 20px 0;
+            padding: 20px;
+            background: #ffffff84;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10%;
+        }
+
+        /* Marquee styling */
+        .marquee {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            white-space: nowrap; /* Prevent text wrap */
+            overflow: hidden; /* Hide text overflow */
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite; /* Adjust animation duration */
+        }
+
+        @keyframes marquee {
+            1% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+           <h1><strong>Training and Development Management</strong></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" onclick="showSection('home')">Home</a></li>
+                    <li><a href="login.html" onclick="showSection('login')">Login</a></li>
+                    <li><a href="register.html" onclick="showSection('register')">Register</a></li>
+                    <li><a href="course.html" onclick="showSection('courses Available')">courses Available</a></li>
+                    <li><a href="enroll.html" onclick="showSection('Course Enrollment')">Course Enrollment</a></li>
+                    <li><a href="aboutus.html" onclick="showSection('About US')">About Us</a></li>
+                    <li><a href="contact.html" onclick="showSection('Contact')">Contact Us</a></li>
+                    <li><a href="feed.html" onclick="showSection('Feedback')">Feedback</a></li>
+                </ul>
+            </nav>
+        </header>
+         <!-- Marquee section -->
+         <div class="marquee">
+            <div class="marquee-content">Hurry up now, limited slots available</div>
+        </div>
+        <div class="login-form">
+            <h2>Training Feedback</h2>
+            <form method="post">
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea>
+
+                <p style="color: white;">Select training programs or courses:</p>
+                <input type="checkbox" id="python_full_stack" name="courses" value="Python Full Stack">
+                <label for="python_full_stack">Python Full Stack</label><br>
+
+                <input type="checkbox" id="java_full_stack" name="courses" value="Java Full Stack">
+                <label for="java_full_stack">Java Full Stack</label><br>
+
+                <input type="checkbox" id="testing" name="courses" value="Testing">
+                <label for="testing">Testing</label><br>
+
+                <input type="checkbox" id="data_science" name="courses" value="Data Science">
+                <label for="data_science">Data Science</label><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

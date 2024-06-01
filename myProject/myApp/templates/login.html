@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <style>
+        body {
+            margin: 0;
+            padding: 10px;
+            height: 100vh;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            background-image: url('image2.jpg'); /* Path to your background image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+        }
+
+        .login-form {
+            background-color: rgba(9, 143, 220, 0.635); /* Background color with opacity */
+            padding: 80px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-form h2 {
+            margin-bottom: 20px;
+        }
+
+        .form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .style5 {
+            font-size: 24px;
+            color: #FF0000;
+        }
+
+        .style12 {
+            font-weight: bold;
+        }
+
+        .style13 {
+            font-size: 24px;
+            color: #FF0000;
+            font-weight: bold;
+        }
+
+        .style16 {
+            color: #FF0000;
+        }
+
+        .style20 {
+            color: #FF0000;
+            font-weight: bold;
+        }
+
+        header {
+            background: #7da9acb7;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 10px;
+            color: white;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+            background-color: rgba(131, 168, 131, 0.598);
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            margin: 20px 0;
+            padding: 20px;
+            background: #ffffff84;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10%;
+        }
+
+        /* Marquee styling */
+        .marquee {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            white-space: nowrap; /* Prevent text wrap */
+            overflow: hidden; /* Hide text overflow */
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite; /* Adjust animation duration */
+        }
+
+        @keyframes marquee {
+            1% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1><strong>Training and Development Management</strong></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" onclick="showSection('home')">Home</a></li>
+                    <li><a href="login.html" onclick="showSection('login')">Login</a></li>
+                    <li><a href="register.html" onclick="showSection('register')">Register</a></li>
+                    <li><a href="course.html" onclick="showSection('courses Available')">courses Available</a></li>
+                    <li><a href="enroll.html" onclick="showSection('Course Enrollment')">Course Enrollment</a></li>
+                    <li><a href="aboutus.html" onclick="showSection('About US')">About Us</a></li>
+                    <li><a href="contact.html" onclick="showSection('Contact')">Contact Us</a></li>
+                    <li><a href="feed.html" onclick="showSection('Feedback')">Feedback</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Marquee section -->
+        <div class="marquee">
+            <div class="marquee-content">Hurry up now, limited slots available</div>
+        </div>
+        <form class="login-form" method="POST" role="form">
+            <fieldset>
+                <legend>Login Using Your Account:</legend>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="User Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
+                <div>
+                    <button type="submit">Login</button>
+                </div>
+                <div>
+                    <p>
+                        <span class="style16"><strong>Are You a New User !!</strong></span>
+                        <span class="style20">! </span>
+                        <a href="register.html" style="color:blue;font-weight: bold;">REGISTER</a>
+                    </p>
+                </div>
+            </fieldset>
+        </form>
+        <div class="mainbar">
+            <div class="tab-content tab-space">
+                <div class="tab-pane active" id="preview-alerts"> 
+                    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+                    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+                    <link href="https://unpkg.com/soft-ui-design-system@1.0.1/assets/css/soft-design-system.min.css" rel="stylesheet" />
+                    <div class="container py-5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

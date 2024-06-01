@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #f4f4f4; */
+    background-image: url(image.jpeg);
+    background-size:cover;
+    
+}
+
+.dashboard-container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #7da9acb7;
+    color:white;
+    padding: 20px 0;
+    
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px;
+    color: white;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+    background-color:rgba(131, 168, 131, 0.598);
+    
+
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    margin: 20px 0;
+    padding: 20px;
+    background: #ffffff84;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10%;
+}
+
+.hidden {
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input {
+    padding: 5px;
+    margin-top: 5px;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #555;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.needs-item, .program-item, .enrollment-item, .progress-item {
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.needs-item:last-child, .program-item:last-child, .enrollment-item:last-child, .progress-item:last-child {
+    border-bottom: none;
+}
